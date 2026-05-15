@@ -43,6 +43,7 @@ function Index() {
       <Trust />
       <CTA />
       <Footer />
+      <AiChatWidget />
     </div>
   );
 }
