@@ -14,9 +14,10 @@ const chatTransport = new DefaultChatTransport({ api: "/api/chat" });
 
 export function AiChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
+  const [inputValue, setInputValue] = useState("");
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const { messages, sendMessage, status, input, setInput } = useChat({
+  const { messages, sendMessage, status } = useChat({
     id: "newbox-assistant",
     transport: chatTransport,
   });
@@ -31,9 +32,9 @@ export function AiChatWidget() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim() || isLoading) return;
-    sendMessage({ text: input.trim() });
-    setInput("");
+    if (!inputValue.trim() || isLoading) return;
+    sendMessage({ text: inputValue.trim() });
+    setInputValue("");
   };
 
   return (
