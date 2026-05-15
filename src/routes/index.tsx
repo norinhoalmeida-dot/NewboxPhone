@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import iphoneHero from "@/assets/iphone-hero.jpg";
 import logoNewbox from "@/assets/logo-newbox.jpg";
+import { AiChatWidget } from "@/components/ai-chat";
 
 export const Route = createFileRoute("/")({
   component: Index,
