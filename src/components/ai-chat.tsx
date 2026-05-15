@@ -106,14 +106,14 @@ export function AiChatWidget() {
           >
             <input
               type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
               placeholder="Digite sua mensagem..."
               className="flex-1 bg-background border border-input rounded-full px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <button
               type="submit"
-              disabled={isLoading || !input.trim()}
+              disabled={isLoading || !inputValue.trim()}
               className="w-10 h-10 rounded-full bg-primary text-primary-foreground grid place-items-center hover:opacity-90 transition disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
               aria-label="Enviar mensagem"
             >
