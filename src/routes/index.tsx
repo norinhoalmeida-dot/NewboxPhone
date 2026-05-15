@@ -14,6 +14,7 @@ import {
   ClipboardCheck,
 } from "lucide-react";
 import iphoneHero from "@/assets/iphone-hero.jpg";
+import logoNewbox from "@/assets/logo-newbox.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -49,15 +50,12 @@ function Nav() {
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2 font-bold tracking-tight">
-          <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-primary-glow grid place-items-center text-primary-foreground">
-            <Smartphone className="w-5 h-5" />
-          </span>
-          <span className="text-sm leading-tight">
-            NEWBOX
-            <br />
-            PHONES
-          </span>
+        <a href="#" className="flex items-center">
+          <img
+            src={logoNewbox}
+            alt="NEWBOX PHONES"
+            className="h-10 w-auto rounded-md"
+          />
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#beneficios" className="hover:text-foreground transition">Benefícios</a>
@@ -291,6 +289,7 @@ function Footer() {
   return (
     <footer className="border-t border-border py-10">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+        <img src={logoNewbox} alt="NEWBOX PHONES" className="h-8 w-auto rounded" />
         <p>© {new Date().getFullYear()} NEWBOX PHONES. Todos os direitos reservados.</p>
         <div className="flex gap-5">
           <a href={WHATSAPP} target="_blank" rel="noreferrer" className="hover:text-foreground">WhatsApp</a>
