@@ -11,6 +11,7 @@ import {
   Smartphone,
   Lock,
   Sparkles,
+  ClipboardCheck,
 } from "lucide-react";
 import iphoneHero from "@/assets/iphone-hero.jpg";
 
@@ -109,6 +110,7 @@ function Hero() {
             <Chip icon={<Lock className="w-3.5 h-3.5" />} label="Compra Segura" />
             <Chip icon={<FileText className="w-3.5 h-3.5" />} label="Nota Fiscal" />
             <Chip icon={<ShieldCheck className="w-3.5 h-3.5" />} label="Garantia 12 Meses" />
+            <Chip icon={<ClipboardCheck className="w-3.5 h-3.5" />} label="Compra Segura com contrato de recebimento" />
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -168,6 +170,7 @@ const benefits = [
   { icon: CheckCircle2, title: "Revisados e Certificados", desc: "Cada aparelho passa por checagem técnica rigorosa." },
   { icon: Globe, title: "Loja 100% Online", desc: "Compre de onde estiver, com toda a comodidade." },
   { icon: Headphones, title: "Atendimento Especializado", desc: "Especialistas Apple prontos para te ajudar." },
+  { icon: ClipboardCheck, title: "Compra Segura com contrato de recebimento", desc: "Contrato formalizado para sua total segurança e confiança na entrega." },
 ];
 
 function Benefits() {
