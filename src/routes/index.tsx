@@ -54,7 +54,7 @@ function Nav() {
           <img
             src={logoNewbox}
             alt="NEWBOX PHONES"
-            className="h-10 w-auto rounded-md"
+            className="h-8 md:h-10 w-auto rounded-md"
           />
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
@@ -289,7 +289,7 @@ function Footer() {
   return (
     <footer className="border-t border-border py-10">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-        <img src={logoNewbox} alt="NEWBOX PHONES" className="h-8 w-auto rounded" />
+        <img src={logoNewbox} alt="NEWBOX PHONES" className="h-6 md:h-8 w-auto rounded" />
         <p>© {new Date().getFullYear()} NEWBOX PHONES. Todos os direitos reservados.</p>
         <div className="flex gap-5">
           <a href={WHATSAPP} target="_blank" rel="noreferrer" className="hover:text-foreground">WhatsApp</a>
