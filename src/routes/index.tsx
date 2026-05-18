@@ -103,15 +103,15 @@ function Hero() {
             <Sparkles className="w-3.5 h-3.5 text-primary" /> Loja premium especializada Apple
           </span>
           <h1 className="mt-6 text-5xl md:text-6xl font-bold tracking-tight leading-[1.05]">
-            iPhones Lacrados e Seminovos com{" "}
+            Especialistas Apple:{" "}
             <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-              1 Ano de Garantia
+              iPhone, MacBook, iPad e Apple Watch
             </span>{" "}
-            e Nota Fiscal
+            com Garantia e Nota Fiscal
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-            A NEWBOX PHONES oferece aparelhos Apple premium com procedência, segurança e envio
-            para todo o Brasil 🇧🇷
+            A NEWBOX é sua Apple Premium Store: produtos lacrados e seminovos com procedência,
+            segurança e envio para todo o Brasil 🇧🇷
           </p>
           <p className="mt-3 text-sm text-muted-foreground">
             Envio rápido <span className="text-primary">•</span> Seguro{" "}
