@@ -1,4 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 import {
   ShieldCheck,
   FileText,
@@ -15,6 +22,10 @@ import {
 } from "lucide-react";
 import iphoneHero from "@/assets/iphone-hero.jpg";
 import iphone17ProMaxBlue from "@/assets/iphone-17-pro-max-blue.jpg";
+import iphone17 from "@/assets/iphone-17.jpg";
+import macbook from "@/assets/macbook.jpg";
+import ipad from "@/assets/ipad.jpg";
+import appleWatch from "@/assets/apple-watch.png";
 import logoNewbox from "@/assets/logo-newbox.jpg";
 import { AiChatWidget } from "@/components/ai-chat";
 
@@ -22,11 +33,11 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "NEWBOX PHONES — iPhones Lacrados e Seminovos com Garantia" },
+      { title: "NEWBOX — Apple Premium Store | iPhone, MacBook, iPad e Apple Watch" },
       {
         name: "description",
         content:
-          "Loja premium especializada Apple. iPhones lacrados e seminovos com 1 ano de garantia, nota fiscal e envio para todo o Brasil.",
+          "Especialistas Apple: iPhone, MacBook, iPad e Apple Watch lacrados e seminovos com 1 ano de garantia, nota fiscal e envio para todo o Brasil.",
       },
     ],
   }),
@@ -40,6 +51,7 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       <Nav />
       <Hero />
+      <Showcase />
       <Benefits />
       <Trust />
       <CTA />
@@ -91,15 +103,15 @@ function Hero() {
             <Sparkles className="w-3.5 h-3.5 text-primary" /> Loja premium especializada Apple
           </span>
           <h1 className="mt-6 text-5xl md:text-6xl font-bold tracking-tight leading-[1.05]">
-            iPhones Lacrados e Seminovos com{" "}
+            Especialistas Apple:{" "}
             <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-              1 Ano de Garantia
+              iPhone, MacBook, iPad e Apple Watch
             </span>{" "}
-            e Nota Fiscal
+            com Garantia e Nota Fiscal
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-            A NEWBOX PHONES oferece aparelhos Apple premium com procedência, segurança e envio
-            para todo o Brasil 🇧🇷
+            A NEWBOX é sua Apple Premium Store: produtos lacrados e seminovos com procedência,
+            segurança e envio para todo o Brasil 🇧🇷
           </p>
           <p className="mt-3 text-sm text-muted-foreground">
             Envio rápido <span className="text-primary">•</span> Seguro{" "}
@@ -164,8 +176,63 @@ function Chip({ icon, label }: { icon: React.ReactNode; label: string }) {
   );
 }
 
+function Showcase() {
+  const autoplay = useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }),
+  );
+  const products = [
+    { img: iphone17, label: "iPhone" },
+    { img: macbook, label: "MacBook" },
+    { img: ipad, label: "iPad" },
+    { img: appleWatch, label: "Apple Watch" },
+  ];
+  return (
+    <section className="py-20 border-t border-border">
+      <div className="max-w-7xl mx-auto px-6">
+        <p className="text-sm text-primary font-medium">Ecossistema Apple</p>
+        <h2 className="mt-2 text-4xl md:text-5xl font-bold tracking-tight max-w-2xl">
+          Toda a linha Apple em um só lugar
+        </h2>
+        <p className="mt-4 text-muted-foreground max-w-xl">
+          iPhone, MacBook, iPad e Apple Watch — lacrados ou seminovos premium, com garantia e nota fiscal.
+        </p>
+        <div className="mt-10">
+          <Carousel
+            opts={{ loop: true, align: "start" }}
+            plugins={[autoplay.current]}
+            className="w-full"
+          >
+            <CarouselContent>
+              {products.map((p) => (
+                <CarouselItem key={p.label} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="group relative aspect-square rounded-3xl border border-border overflow-hidden bg-card">
+                    <div
+                      className="absolute inset-0"
+                      style={{ background: "var(--gradient-hero)" }}
+                    />
+                    <img
+                      src={p.img}
+                      alt={`${p.label} Apple - NEWBOX`}
+                      loading="lazy"
+                      className="relative w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/90 to-transparent">
+                      <span className="text-sm font-semibold">{p.label}</span>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 const benefits = [
-  { icon: ShieldCheck, title: "1 Ano de Garantia", desc: "Cobertura completa por 12 meses em todos os aparelhos." },
+  { icon: ShieldCheck, title: "1 Ano de Garantia", desc: "Cobertura completa por 12 meses em todos os produtos Apple." },
   { icon: FileText, title: "Nota Fiscal", desc: "Compra documentada com total transparência." },
   { icon: Truck, title: "Envio para Todo Brasil", desc: "Logística rápida e segura de norte a sul." },
   { icon: CheckCircle2, title: "Revisados e Certificados", desc: "Cada aparelho passa por checagem técnica rigorosa." },
@@ -206,7 +273,7 @@ function Benefits() {
 
 function Trust() {
   const items = [
-    "Aparelhos originais Apple com procedência verificada",
+    "Produtos Apple originais com procedência verificada",
     "Lacrados ou seminovos premium com bateria saudável",
     "Embalagem segura e rastreio em tempo real",
     "Suporte pós-venda durante toda a garantia",
@@ -217,7 +284,7 @@ function Trust() {
         <div>
           <p className="text-sm text-primary font-medium">Procedência</p>
           <h2 className="mt-2 text-4xl md:text-5xl font-bold tracking-tight">
-            Seu próximo iPhone premium está aqui.
+            Seu próximo produto Apple premium está aqui.
           </h2>
           <p className="mt-5 text-muted-foreground text-lg">
             Apple Premium com garantia, procedência e envio nacional. Cada detalhe pensado para
