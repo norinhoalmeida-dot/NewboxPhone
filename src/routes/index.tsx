@@ -177,7 +177,7 @@ function Chip({ icon, label }: { icon: React.ReactNode; label: string }) {
 }
 
 const benefits = [
-  { icon: ShieldCheck, title: "1 Ano de Garantia", desc: "Cobertura completa por 12 meses em todos os aparelhos." },
+  { icon: ShieldCheck, title: "1 Ano de Garantia", desc: "Cobertura completa por 12 meses em todos os produtos Apple." },
   { icon: FileText, title: "Nota Fiscal", desc: "Compra documentada com total transparência." },
   { icon: Truck, title: "Envio para Todo Brasil", desc: "Logística rápida e segura de norte a sul." },
   { icon: CheckCircle2, title: "Revisados e Certificados", desc: "Cada aparelho passa por checagem técnica rigorosa." },
