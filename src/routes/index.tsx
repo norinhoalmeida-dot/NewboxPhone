@@ -1,4 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 import {
   ShieldCheck,
   FileText,
@@ -15,6 +22,10 @@ import {
 } from "lucide-react";
 import iphoneHero from "@/assets/iphone-hero.jpg";
 import iphone17ProMaxBlue from "@/assets/iphone-17-pro-max-blue.jpg";
+import iphone17 from "@/assets/iphone-17.jpg";
+import macbook from "@/assets/macbook.jpg";
+import ipad from "@/assets/ipad.jpg";
+import appleWatch from "@/assets/apple-watch.png";
 import logoNewbox from "@/assets/logo-newbox.jpg";
 import { AiChatWidget } from "@/components/ai-chat";
 
