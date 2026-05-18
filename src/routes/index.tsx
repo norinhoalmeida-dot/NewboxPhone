@@ -231,12 +231,12 @@ function Trust() {
             ))}
           </ul>
         </div>
-        <div className="relative aspect-square rounded-3xl border border-border overflow-hidden bg-card">
+        <div className="relative aspect-[3/4] rounded-3xl border border-border overflow-hidden bg-card">
           <div
             className="absolute inset-0"
             style={{ background: "var(--gradient-hero)" }}
           />
-          <img src={iphoneHero} alt="iPhone procedência" className="relative w-full h-full object-cover" />
+          <img src={iphoneHero} alt="iPhone procedência" className="relative w-full h-full object-contain" />
         </div>
       </div>
     </section>
