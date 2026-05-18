@@ -80,6 +80,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@newboxphones" },
+      { name: "twitter:title", content: "NEWBOX PHONES — iPhones Premium com Garantia" },
+      { name: "twitter:description", content: "Loja premium especializada Apple. iPhones lacrados e seminovos com 1 ano de garantia, nota fiscal e envio para todo o Brasil." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/mXSIYHmwoKhLw21Q1l264qI0EY83/social-images/social-1779126649109-Logo_NewBox.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/mXSIYHmwoKhLw21Q1l264qI0EY83/social-images/social-1779126649109-Logo_NewBox.webp" },
     ],
     links: [
       {
