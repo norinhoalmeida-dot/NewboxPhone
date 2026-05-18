@@ -176,6 +176,61 @@ function Chip({ icon, label }: { icon: React.ReactNode; label: string }) {
   );
 }
 
+function Showcase() {
+  const autoplay = useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }),
+  );
+  const products = [
+    { img: iphone17, label: "iPhone" },
+    { img: macbook, label: "MacBook" },
+    { img: ipad, label: "iPad" },
+    { img: appleWatch, label: "Apple Watch" },
+  ];
+  return (
+    <section className="py-20 border-t border-border">
+      <div className="max-w-7xl mx-auto px-6">
+        <p className="text-sm text-primary font-medium">Ecossistema Apple</p>
+        <h2 className="mt-2 text-4xl md:text-5xl font-bold tracking-tight max-w-2xl">
+          Toda a linha Apple em um só lugar
+        </h2>
+        <p className="mt-4 text-muted-foreground max-w-xl">
+          iPhone, MacBook, iPad e Apple Watch — lacrados ou seminovos premium, com garantia e nota fiscal.
+        </p>
+        <div className="mt-10">
+          <Carousel
+            opts={{ loop: true, align: "start" }}
+            plugins={[autoplay.current]}
+            className="w-full"
+          >
+            <CarouselContent>
+              {products.map((p) => (
+                <CarouselItem key={p.label} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="group relative aspect-square rounded-3xl border border-border overflow-hidden bg-card">
+                    <div
+                      className="absolute inset-0"
+                      style={{ background: "var(--gradient-hero)" }}
+                    />
+                    <img
+                      src={p.img}
+                      alt={`${p.label} Apple - NEWBOX`}
+                      loading="lazy"
+                      className="relative w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/90 to-transparent">
+                      <span className="text-sm font-semibold">{p.label}</span>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 const benefits = [
   { icon: ShieldCheck, title: "1 Ano de Garantia", desc: "Cobertura completa por 12 meses em todos os produtos Apple." },
   { icon: FileText, title: "Nota Fiscal", desc: "Compra documentada com total transparência." },
