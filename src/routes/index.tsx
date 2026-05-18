@@ -33,11 +33,11 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "NEWBOX PHONES — iPhones Lacrados e Seminovos com Garantia" },
+      { title: "NEWBOX — Apple Premium Store | iPhone, MacBook, iPad e Apple Watch" },
       {
         name: "description",
         content:
-          "Loja premium especializada Apple. iPhones lacrados e seminovos com 1 ano de garantia, nota fiscal e envio para todo o Brasil.",
+          "Especialistas Apple: iPhone, MacBook, iPad e Apple Watch lacrados e seminovos com 1 ano de garantia, nota fiscal e envio para todo o Brasil.",
       },
     ],
   }),
