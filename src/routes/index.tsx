@@ -218,7 +218,7 @@ function Benefits() {
 
 function Trust() {
   const items = [
-    "Aparelhos originais Apple com procedência verificada",
+    "Produtos Apple originais com procedência verificada",
     "Lacrados ou seminovos premium com bateria saudável",
     "Embalagem segura e rastreio em tempo real",
     "Suporte pós-venda durante toda a garantia",
@@ -229,7 +229,7 @@ function Trust() {
         <div>
           <p className="text-sm text-primary font-medium">Procedência</p>
           <h2 className="mt-2 text-4xl md:text-5xl font-bold tracking-tight">
-            Seu próximo iPhone premium está aqui.
+            Seu próximo produto Apple premium está aqui.
           </h2>
           <p className="mt-5 text-muted-foreground text-lg">
             Apple Premium com garantia, procedência e envio nacional. Cada detalhe pensado para
