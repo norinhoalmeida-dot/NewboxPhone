@@ -14,6 +14,7 @@ import {
   ClipboardCheck,
 } from "lucide-react";
 import iphoneHero from "@/assets/iphone-hero.jpg";
+import iphone17ProMaxBlue from "@/assets/iphone-17-pro-max-blue.jpg";
 import logoNewbox from "@/assets/logo-newbox.jpg";
 import { AiChatWidget } from "@/components/ai-chat";
 
@@ -231,12 +232,19 @@ function Trust() {
             ))}
           </ul>
         </div>
-        <div className="relative aspect-[3/4] rounded-3xl border border-border overflow-hidden bg-card">
+        <div className="relative aspect-square rounded-3xl border border-border overflow-hidden bg-card">
           <div
             className="absolute inset-0"
             style={{ background: "var(--gradient-hero)" }}
           />
-          <img src={iphoneHero} alt="iPhone procedência" className="relative w-full h-full object-contain" />
+          <img
+            src={iphone17ProMaxBlue}
+            alt="iPhone 17 Pro Max Azul - procedência NEWBOX PHONES"
+            width={1024}
+            height={1024}
+            loading="lazy"
+            className="relative w-full h-full object-cover"
+          />
         </div>
       </div>
     </section>
