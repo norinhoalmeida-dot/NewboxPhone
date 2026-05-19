@@ -26,6 +26,9 @@ import iphone17 from "@/assets/iphone-17.jpg";
 import macbook from "@/assets/macbook.jpg";
 import ipad from "@/assets/ipad.jpg";
 import appleWatch from "@/assets/apple-watch.png";
+import airpods from "@/assets/airpods.jpg";
+import appleCharger from "@/assets/apple-charger.jpg";
+import appleCable from "@/assets/apple-cable.jpg";
 import logoNewbox from "@/assets/logo-newbox.jpg";
 import { AiChatWidget } from "@/components/ai-chat";
 
@@ -185,6 +188,9 @@ function Showcase() {
     { img: macbook, label: "MacBook" },
     { img: ipad, label: "iPad" },
     { img: appleWatch, label: "Apple Watch" },
+    { img: airpods, label: "AirPods" },
+    { img: appleCharger, label: "Fontes" },
+    { img: appleCable, label: "Cabos" },
   ];
   return (
     <section className="py-20 border-t border-border">
